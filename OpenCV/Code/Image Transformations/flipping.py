@@ -1,0 +1,12 @@
+import cv2 as cv
+img=cv.imread('Photos/dog.jpg')
+#cv.imshow('Image',img)
+resized=cv.resize(img,(500,500),interpolation=cv.INTER_AREA)
+cv.imshow('Resized',resized)
+#flip=cv.flip(resized,0)
+#(OR)
+#flip=cv.flip(resized,1)
+#(OR)
+flip=cv.flip(resized,-1)
+cv.imshow('Flipped',flip)
+cv.waitKey(0)

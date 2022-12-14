@@ -1,0 +1,10 @@
+import cv2 as cv
+img=cv.imread('Photos/boston.jpg')
+cv.imshow('Image',img)
+# canny=cv.Canny(img,125,175)
+# cv.imshow('Canny',canny)
+blur=cv.GaussianBlur(img,(7,7),cv.BORDER_DEFAULT)
+cv.imshow('Blur',blur)
+canny=cv.Canny(blur,125,175)
+cv.imshow('Canny',canny)
+cv.waitKey(0)
